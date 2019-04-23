@@ -2,6 +2,9 @@
 """
 Created on Tue Apr 16 16:40:42 2019
 
+Python Program that extracts the ObjectName. RA. DEC. RedSjoft. Redshift Flag
+from a NED.txt file into a CSV file.
+
 @author: Steven Li
 """
 
@@ -30,10 +33,15 @@ def extract(path):
             ra_start = find_nth(ln,'|',2)
             dec_start = find_nth(ln,'|',3)
             stop = find_nth(ln,'|',4)
+            rs_start = find_nth(ln,'|',6)
+            rsf_start = find_nth(ln,'|',7)
+            end = find_nth(ln,'|',8)
             name = ln[name_start+2:ra_start-1].replace(" ","")
             ra = ln[ra_start+2:dec_start-1].replace(" ","")
             dec = ln[dec_start+2:stop-1].replace(" ","")
-            arr.append([name,ra,dec])
+            rs = ln[rs_start+2:rsf_start-1].replace(" ","")
+            rsf = ln[rsf_start+2:end-1].replace(" ","")
+            arr.append([name,ra,dec,rs,rsf])
             ln = file.readline()
     arr.pop() #Throw away last empty
     return arr
@@ -66,6 +74,8 @@ def main():
                 print("{}.csv created unsuccesfully.".format(filename))
         else:
             exit
+    else:
+        write(array,filename+".csv")
 
 if __name__ == '__main__':  
    main()
