@@ -3,7 +3,7 @@
 **Project goal:** Use machine learning to discriminate between galaxies in the Perseus cluster and the background giant galaxies.
 
 ```
-├── PerseusDwarfs
+├── PerseusDwarfs               <--- Previous assignment of similar topic
 │   ├── PerseusDwarfs.ipynb
 │   ├── background_galaxies.csv
 │   ├── background_galaxies.png
@@ -18,18 +18,23 @@
 │   ├── plausible_galaxies.png
 │   └── search_area.png
 ├── README.md
+├── complete                    <--- Merged datasets of NED and SDSS
+│   ├── ngc383.csv
+│   └── ngc507.csv
+├── cross-id                    <--- Datasets from NED formatted for CrossID
+│   ├── ngc383.csv
+│   └── ngc507.csv
 ├── data-analysis.ipynb
-├── datasets-csv
-│   ├── ngc383-crossid.csv
-│   ├── ngc383-ned.csv
-│   ├── ngc507-crossid.csv
-│   ├── ngc507-ned.csv
-│   ├── perseus-background-crossid.csv
-│   ├── perseus-background-ned.csv
-│   ├── perseus-crossid.csv
-│   └── perseus-ned.csv
-├── datasets-txt
+├── datasets-txt                <--- Datasets from NED in txt format
 │   ├── Perseus_NED.txt
 │   └── back_NED.txt
-└── helper.py
+├── helper.py                   <--- Converts txt format to csv format
+├── ned                         <--- Datasets from NED in csv format
+│   ├── ngc383.csv
+│   └── ngc507.csv
+├── ngc383-redshifts.ipynb      <--- Data analysist of NGC 383 redshifts
+├── ngc507-redshifts.ipynb      <--- Data analysist of NGC 507 redshifts
+└── sdss                        <--- Datasets of SDSS library combined with NED
+    ├── ngc383.csv
+    └── ngc507.csv
 ```
