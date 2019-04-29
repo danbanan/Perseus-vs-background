@@ -18,23 +18,23 @@
 │   ├── plausible_galaxies.png
 │   └── search_area.png
 ├── README.md
-├── complete                    <--- Merged datasets of NED and SDSS
+├── complete                    <--- Merged datasets of SDSS and NED redshifts
 │   ├── ngc383.csv
 │   └── ngc507.csv
-├── cross-id                    <--- Datasets from NED formatted for CrossID
+├── cross-id                    <--- Datasets from NED formatted for CrossID search
 │   ├── ngc383.csv
 │   └── ngc507.csv
 ├── data-analysis.ipynb
-├── datasets-txt                <--- Datasets from NED in txt format
+├── datasets-txt                <--- Datasets from NED search in txt format
 │   ├── Perseus_NED.txt
 │   └── back_NED.txt
 ├── helper.py                   <--- Converts txt format to csv format
-├── ned                         <--- Datasets from NED in csv format
+├── ned                         <--- Datasets from NED search in csv format
 │   ├── ngc383.csv
 │   └── ngc507.csv
-├── ngc383-redshifts.ipynb      <--- Data analysist of NGC 383 redshifts
-├── ngc507-redshifts.ipynb      <--- Data analysist of NGC 507 redshifts
-└── sdss                        <--- Datasets of SDSS library combined with NED
+├── ngc383-redshifts.ipynb      <--- Data analysis of NGC 383 redshifts
+├── ngc507-redshifts.ipynb      <--- Data analysis of NGC 507 redshifts
+└── sdss                        <--- SDSS datasets of the stellar objects found in NED search
     ├── ngc383.csv
     └── ngc507.csv
 ```
