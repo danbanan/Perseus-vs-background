@@ -2,7 +2,7 @@
 """
 Created on Tue Apr 16 16:40:42 2019
 
-Python Program that extracts the ObjectName. RA. DEC. RedSjoft. Redshift Flag
+Python Program that extracts the ObjectName. RA. DEC. RedShift. Redshift Flag
 from a NED.txt file into a CSV file.
 
 @author: Steven Li
@@ -13,6 +13,7 @@ import os
 import sys
 
 #Setup
+shifts = False
 perseus = []
 background = []
 
@@ -33,15 +34,18 @@ def extract(path):
             ra_start = find_nth(ln,'|',2)
             dec_start = find_nth(ln,'|',3)
             stop = find_nth(ln,'|',4)
-            rs_start = find_nth(ln,'|',6)
-            rsf_start = find_nth(ln,'|',7)
-            end = find_nth(ln,'|',8)
             name = ln[name_start+2:ra_start-1].replace(" ","")
             ra = ln[ra_start+2:dec_start-1].replace(" ","")
             dec = ln[dec_start+2:stop-1].replace(" ","")
-            rs = ln[rs_start+2:rsf_start-1].replace(" ","")
-            rsf = ln[rsf_start+2:end-1].replace(" ","")
-            arr.append([name,ra,dec,rs,rsf])
+            if(shifts == True):
+                rs_start = find_nth(ln,'|',6)
+                rsf_start = find_nth(ln,'|',7)
+                end = find_nth(ln,'|',8)
+                rs = ln[rs_start+2:rsf_start-1].replace(" ","")
+                rsf = ln[rsf_start+2:end-1].replace(" ","")
+                arr.append([name,ra,dec,rs,rsf])
+            else:
+                arr.append([name,ra,dec])
             ln = file.readline()
     arr.pop() #Throw away last empty
     return arr
@@ -61,12 +65,19 @@ def main():
     if not os.path.isfile(filepath):
        print("File path {} does not exist. Exiting...".format(filepath))
        exit
-     
+       
+    print('Do you want Redshift & Redshift Flag?')
+    x = input().lower().replace(" ","")
+    if ((x == 'y') or (x == 'yes')):
+        global shifts
+        shifts = True
+    
+    
     array = extract(filepath)
       
     if os.path.isfile(filename+".csv"):
         print("File exists, overwrite (Y/N)?")
-        x = input().lower()
+        x = input().lower().replace(" ","")
         if ((x == 'y') or (x == 'yes')):
             if(write(array,filename+".csv")):
                 print("{}.csv created succesfully.".format(filename))
