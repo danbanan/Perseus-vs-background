@@ -36,7 +36,9 @@ and giant background galaxies.
 │   └── ngc507.csv
 ├── cross-id                    <--- Datasets from NED formatted for CrossID search
 │   ├── ngc383.csv
-│   └── ngc507.csv
+│   ├── ngc507.csv
+│   ├── perseus.csv
+│   └── background.csv
 ├── datasets-txt                <--- Datasets from NED search in txt format
 │   ├── Perseus_NED.txt
 │   └── back_NED.txt
@@ -44,13 +46,17 @@ and giant background galaxies.
 ├── helper.py                   <--- Converts txt format to csv format
 ├── ned                         <--- Datasets from NED search in csv format
 │   ├── ngc383.csv
-│   └── ngc507.csv
+│   ├── ngc507.csv
+│   ├── perseus.csv
+│   └── background.csv
 ├── ngc383-redshifts.ipynb      <--- Data analysis of NGC 383 redshifts
 ├── ngc507-redshifts.ipynb      <--- Data analysis of NGC 507 redshifts
 ├── perseus.ipynb               <--- Creating test data for Perseus cluster
 └── sdss                        <--- SDSS datasets of the stellar objects found in
     ├── ngc383.csv
-    └── ngc507.csv
+    ├── ngc507.csv
+    ├── perseus.csv
+    └── background.csv
 ```
 
 As previously mentioned we have a hard time differentiating foreground dwarfes 
