@@ -1,6 +1,4 @@
-# Astrophysics Machine Learning Project
-
-## Classifying Foreground Dwarfs and Background Giants in the Perseus Cluster
+# Classifying Foreground Dwarfs and Background Giants in the Perseus Cluster
 
 Within the Perseus cluster we are able to tell the difference between foreground dwarfs from background galaxies with photometric redshift 0.08. However, we have a hard time differentiating foreground galaxies from background galaxies with redshift between **[0.04-0.07]**. In a previous research assignment, Dan compared visually foreground dwarf galaxies to background giant galaxies in the Perseus cluster with redshifts that falls within this particular range. He found that there were a lot of similarities, especially in shape, but you could also tell the difference by comparing the size and intensity of color between the two galaxy groups. However, those were mere observations and there was no clear quantifiable way to discern the differences. Due to the fact that there is an overlap of both background giants and foreground dwarfs between a photometric redshift of **[0.04-0.07]**, we determined that there was no clear-cut cookie cutter way to differentiate the two without performing rigorous detailed analysis. 
 
@@ -8,6 +6,7 @@ From that, we wondered if there are any other single parameter or combination of
 
 **Project Goal:** Aid in completing the Perseus cluster catalog by using the scikit-learn library to build a classification model, and perform data analysis to see if there are any other parameters besides spectroscopic redshift that can discriminate between foreground dwarf galaxies in the Perseus cluster and giant background galaxies.
 
+## Project Folder Structure
 ```
 ├── PerseusDwarfs                     <--- Previous assignment about similar topic
 │   ├── PerseusDwarfs.ipynb
