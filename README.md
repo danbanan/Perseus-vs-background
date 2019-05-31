@@ -8,7 +8,7 @@ From that, we wondered if there are any other single parameter or combination of
 
 ## Project Folder Structure
 ```
-├── PerseusDwarfs                     <--- Previous assignment about similar topic
+├── PerseusDwarfs                     <--- Preceding assignment to research project
 │   ├── PerseusDwarfs.ipynb
 │   └── ...
 ├── README.md
