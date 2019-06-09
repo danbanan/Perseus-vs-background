@@ -6,6 +6,10 @@ From that, we wondered if there are any other single parameter or combination of
 
 **Project Goal:** Aid in completing the Perseus cluster catalog by using the scikit-learn library to build a classification model, and perform data analysis to see if there are any other parameters besides spectroscopic redshift that can discriminate between foreground dwarf galaxies in the Perseus cluster and giant background galaxies.
 
+[Research Paper](https://nbviewer.jupyter.org/github/danrachou/Perseus-vs-background/blob/master/final-report.pdf)
+
+[Presentation Slides](https://nbviewer.jupyter.org/github/danrachou/Perseus-vs-background/blob/master/presentation.pdf)
+
 ## Project Folder Structure
 ```
 ├── PerseusDwarfs                     <--- Preceding assignment to research project
